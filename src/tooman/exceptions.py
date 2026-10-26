@@ -1,0 +1,2 @@
+class ToomanError(Exception):
+    pass

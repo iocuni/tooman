@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tooman"
+version = "0.1.0"
+description = "A GitHub-based package manager written in Python"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer",
+    "rich"
+]
+
+[project.scripts]
+tooman = "tooman.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tooman"]
